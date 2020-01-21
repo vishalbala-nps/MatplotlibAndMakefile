@@ -1,6 +1,6 @@
 #include <stdio.h>
 int
 main() {
-   printf("{\"a\":10,\"b\":20,\"c\":30}");
+   printf("{ \"China\": 138, \"India\": 129, \"United States\": 32, \"Indonesia\": 26, \"Brazil\": 20 }");
    return(0);
 }

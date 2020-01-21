@@ -3,23 +3,23 @@ import json
 
 plt.style.use('ggplot')
 
-subs = []
-marks=[]
-marksfile = open("./data.txt","r")
-marksjson = json.loads(marksfile.read())
-for sub,mark in marksjson.items():
-   subs.append(sub)
-   marks.append(mark)
+countries = []
+population = []
+populationfile = open("./data.txt","r")
+populationjson = json.loads(populationfile.read())
+for sub,pop in populationjson.items():
+   countries.append(sub)
+   population.append(pop)
 
 x_pos = []
-for i in range(0,len(subs)):
+for i in range(0,len(countries)):
    x_pos.append(i)
 
-plt.bar(x_pos, marks, color='green')
-plt.xlabel("Subjects")
-plt.ylabel("Marks")
-plt.title("Student Marks")
+plt.bar(x_pos, population, color='green')
+plt.xlabel("Countries")
+plt.ylabel("Population (in crores)")
+plt.title("Population of Top 5 Countries")
 
-plt.xticks(x_pos, subs)
+plt.xticks(x_pos, countries)
 
 plt.show()
